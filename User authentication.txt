@@ -1,0 +1,22 @@
+username = 'musk' 
+password = 'elon'
+file = open("myfile.txt","a")
+file.write(username)
+file.write(" ")
+file.write(password)
+file.write("\n")
+file.close()
+def login():
+    username = input("Please enter your username")
+    password = input("Please enter your password")  
+    for line in open("accountfile.txt","r").readlines(): 
+        login_info = line.split() 
+        if username == login_info[0] and password == login_info[1]:
+            print("Login successful")
+            return True
+    print("Wrong credentials")
+    return False
+if login():
+        print("You are now logged in...")
+else:
+        print("You aren't logged in!")                                                                                        
