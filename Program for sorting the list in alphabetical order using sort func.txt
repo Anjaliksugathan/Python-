@@ -1,0 +1,15 @@
+with open('file3.txt', 'r') as f:
+    words = f.read()
+    words=words.split()
+    words = [word.strip() for word in words]
+    unsort_list = words
+def sortalfa(unsort_list):
+    for i in range(len(unsort_list)-1):
+        for j in range(i+1,len(unsort_list)):
+            if unsort_list[i]>unsort_list[j]:
+                temp = unsort_list[i]
+                unsort_list[i] = unsort_list[j]
+                unsort_list[j] = temp
+    print("sorted list:{}".format(unsort_list))
+
+sortalfa(words)
