@@ -7,7 +7,6 @@ def choices():
        return checkdetails()
     else:
        raise TypeError
-       .
 
 def getdetails():
     print("Please Provide")
